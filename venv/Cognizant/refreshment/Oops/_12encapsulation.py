@@ -1,0 +1,1 @@
+continuea = "from encapsulation"
