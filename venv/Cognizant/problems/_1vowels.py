@@ -11,3 +11,20 @@ for ch in str2:
     if ch in "aeiouAEIOU":
         cnt2+=1
 print(cnt2)
+
+# Read input
+S = input().strip()
+
+# Set of vowels (both lowercase & uppercase)
+vowels = set("aeiouAEIOU")
+
+# Counter
+count = 0
+
+# Check each character
+for ch in S:
+    if ch in vowels:
+        count += 1
+
+# Output the total vowel count
+print(count)
