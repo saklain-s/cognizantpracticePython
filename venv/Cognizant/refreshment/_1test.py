@@ -10,8 +10,7 @@ Write a program that checks if a number is even or odd.
 
 name = input()
 age = int(input())
-
-print(f"Hello {name}, you are {age} years old.")
+print(f"Hello {name} your are {age} years old.")
 
 x = int(input())
 y = int(input())
@@ -19,10 +18,13 @@ y = int(input())
 print(x+y)
 print(x-y)
 print(x*y)
-print(x // y)
+print(x//y)
+print(x/y)
+
 
 z = int(input())
-if(z & 1 == 1):
-    print("odd")
+
+if z & 1 == 1:
+    print("Odd")
 else:
-    print("even")
+    print("Even")

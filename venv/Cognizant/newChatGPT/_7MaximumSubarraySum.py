@@ -32,12 +32,24 @@
 #   - Elements can be negative or positive
 
 
-target = int(input())
+n = int(input())
 nums = list(map(int,input().split()))
-total = 0
-
+max_sum=nums[0]
 for i in range(len(nums)):
-    for j in range(i,(len(nums))):
-        if total < target:
-            total+= nums[j]
-print(total)
+    total = 0
+    for j in range(i,n):
+        total+=nums[j]
+        max_sum = max(max_sum,total)
+print(max_sum)
+
+# Kadane's Algorith
+
+x = int(input())
+nums2 = list(map(int,input().split()))
+
+max_sum2 = nums2[0]
+current_sum = nums2[0]
+for i in range(1,x):
+    current_sum = max(nums2[i], current_sum+nums2[i])
+    max_sum2 = max(current_sum,max_sum2)
+print(max_sum2)

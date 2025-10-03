@@ -13,7 +13,7 @@ from math import factorial
 
 for num in range(2, 51):
     is_prime = True
-    for i in range(2, int(num ** 0.5) + 1):
+    for i in range(2, int(math.sqrt(num)) + 1):
         if num % i == 0:
             is_prime = False
             break
@@ -27,7 +27,17 @@ for i in range(1,x+1):
     factorial *=i
 print(factorial)
 
+
+for num in range(2, x):
+    is_prime = True
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num, end=" ")
 nums = []
+print()
 for i in range(1,21):
     if i %2 == 0:
         nums.append(i)

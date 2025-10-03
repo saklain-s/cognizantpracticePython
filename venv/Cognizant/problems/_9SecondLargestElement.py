@@ -1,13 +1,14 @@
 def second_largest_single_pass(nums):
-    first = second = None
+
+    first, second = None,None
     for num in nums:
-        if first is None or num > first:
+        if first is None or num >first:
             second = first
             first = num
-        elif num != first and (second is None or num > second):
+        elif num != first and (second is None or num > second ):
             second = num
     if second is None:
-        print("No second largest element")
+        print("No")
     else:
         print(second)
 
@@ -25,6 +26,6 @@ def second_largest(nums):
 
 nums = list(map(int, input("Enter integers separated by space: ").split()))
 second_largest(nums)
-unique_nums = set(nums)
-sortedList = sorted(unique_nums,reverse=True)
-print(sortedList[1])
+unique_num = set(nums)
+sortlist = sorted(unique_num,reverse=True)
+print(sortlist[1])
