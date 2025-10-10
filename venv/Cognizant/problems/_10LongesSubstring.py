@@ -1,9 +1,7 @@
 
 def lengthOfLongestSubstring(s) -> int:
-
     if len(s) == 0:
         return 0
-
     l=r=0
     maxSum=0
     n = len(s)
@@ -16,11 +14,7 @@ def lengthOfLongestSubstring(s) -> int:
         currentSum = r - l + 1
         maxSum = max(currentSum,maxSum)
         r+=1
-
     return maxSum
-
-
-
 text = input().strip()
 
 print(lengthOfLongestSubstring(text))

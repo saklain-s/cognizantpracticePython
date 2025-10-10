@@ -30,12 +30,12 @@ a b c
 S = input().strip()
 S = S.replace(" ","")
 
-freq = {}
+freq={}
 for ch in S:
     freq[ch] = freq.get(ch,0)+1
 
-maximum= max(freq.values())
+maximim = max(freq.values())
 
-result = [ch for ch in freq if freq[ch] == maximum]
+result = [ch for ch in freq if freq[ch] == maximim]
 
 print(" ".join(sorted(result)))

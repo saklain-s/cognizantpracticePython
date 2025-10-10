@@ -29,13 +29,11 @@ Only last row [11,11] has odd sum = 22 (even). So 1 magical row.
 r = int(input())
 c = int(input())
 arr = [list(map(int,input().split())) for _ in range(r)]
-
-cnt = 0
+evenCount=0
 for i in range(r):
-    sumOf = 0
+    sumOf=0
     for j in range(c):
-        if arr[i][j] %2 !=0:
-            sumOf+=arr[i][j]
-    if sumOf%2==0:
-        cnt+=1
-print(cnt)
+        sumOf+=arr[i][j]
+    if sumOf % 2 == 0:
+        evenCount+=1
+print(evenCount)

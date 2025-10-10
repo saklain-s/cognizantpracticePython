@@ -1,20 +1,21 @@
 x = int(input())
-sumof = 0
+sumf = 0
 temp = x
-while(x > 0):
+while x > 0:
     rem = x % 10
-    sumof = (sumof * 10) +rem
+    sumf = sumf * 10 + rem
     x//=10
-if sumof == temp:
+
+if sumf == temp:
     print("Palindrome")
 else:
     print("Not a Palindrome")
 
 #Or this method
 n = input()
-if(int(n)<0):
-    print("Invalid Input")
-elif(n==n[::-1]):
-    print("Palindrome")
+if (int(n)<0):
+    print("Invalid")
+elif n== n[::-1]:
+    print("Yes")
 else:
-    print("Not palindrome")
+    print("No")

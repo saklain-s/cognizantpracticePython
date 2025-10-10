@@ -1,14 +1,14 @@
 import math
 x = int(input())
 if x < 2:
-    print("Not Prime")
+    print("Not a prime")
 else:
-    prime = True
-    for i in range(2,int(math.sqrt(x))+1): # range(2, int(x**0.5)+1) optimized sol
+    Y = True
+    for i in range(2,int(math.sqrt(x))+1):
         if x % i == 0:
-            prime = False
+            Y = False
             break
-    if prime:
+    if Y:
         print("Prime")
     else:
-        print("Not Prime")
+        print("No ")

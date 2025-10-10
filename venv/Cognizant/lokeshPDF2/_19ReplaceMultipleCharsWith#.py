@@ -12,19 +12,17 @@ def transform_string(s: str) -> str:
 
     while i < n:
         j = i
-        while j < n and s[j] == s[i]:
-            j += 1
+        while j < n and s[i]==s[j]:
+            j+=1
         run_len = j - i
-
-        if run_len >= 2:
+        if run_len >=2:
             if not result or result[-1] != '#':
                 result.append('#')
         else:
             result.append(s[i])
-
         i = j
-
     return ''.join(result)
+
 
 text = input().strip()
 print(transform_string(text))

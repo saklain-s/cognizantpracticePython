@@ -30,10 +30,6 @@ def adjacent_sensors(A, N):
         result.append(cnt)
     return result
 
-
-
-
-
 N = int(input().strip())
 A = list(map(int, input().split()))
 

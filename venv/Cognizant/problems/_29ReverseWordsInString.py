@@ -24,10 +24,8 @@ Output: "world hello"
 S = input().strip()
 
 words = S.split()
+newStr = ""
 
-newStr=""
-
-for word in range(len(words) -1, -1,-1):
-    newStr+= words[word]+" "
-
-print(newStr.strip())
+for ch in range(len(S),-1,-1):
+    newStr+=S[ch]
+print(newStr)

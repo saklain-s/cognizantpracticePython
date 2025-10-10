@@ -1,4 +1,3 @@
-from collections import Counter
 """
 Question 2: Count Pairs with Given Sum
 Problem
@@ -25,19 +24,19 @@ n = int(input())
 arr = list(map(int, input().split()))
 target = int(input())
 
-counter=0
-for i in range(n):
-    for j in range(i+1,n):
+counter = 0
+for i in range(len(arr)):
+    for j in range(i+1,len(arr)):
         if arr[i]+arr[j] == target:
             counter+=1
 
-freq = {}
-count = 0
-for x in arr:
-    need = target - x
-    if need in freq:
-        count += freq[need]
-    freq[x] = freq.get(x,0)+1
 
+count=0
+freq={}
+for num in arr:
+    seen = target-num
+    if seen in freq:
+        count+=1
+    freq[num] = freq.get(num,0)+1
 print(counter)
 print(count)

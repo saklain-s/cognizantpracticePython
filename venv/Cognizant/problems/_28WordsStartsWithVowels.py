@@ -25,9 +25,10 @@ So the result is 4.
 
 S = input().strip()
 words = S.split()
+cnt = 0
 
-cnt= 0
 vowels = set("aieouAEIOU")
+
 for word in words:
     if word[0] in vowels:
         cnt+=1

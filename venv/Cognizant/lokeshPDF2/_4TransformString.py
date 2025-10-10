@@ -31,6 +31,7 @@ cost = 0
 freq2 = {}
 for ch in s2:
     freq2[ch] = freq2.get(ch,0)+1
+
 for ch in freq2:
     need = freq2[ch] - freq.get(ch,0)
     if need > 0:

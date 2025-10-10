@@ -32,13 +32,14 @@ s = input().strip()
 count = 0
 i = 0
 n = len(s)
+
 while i < n:
     if s[i].isdigit():
         start = i
         while i < n and s[i].isdigit():
             i+=1
-        end=i-1
-        if start > 0 and end < n - 1 and s[start-1].isalpha() and s[end+1].isalpha():
+        end =i -1
+        if start > 0 and end < n -1 and s[start-1].isalpha() and s[end+1].isalpha():
             count+=1
     else:
         i+=1
