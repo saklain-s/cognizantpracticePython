@@ -26,6 +26,6 @@ S = input().strip()
 words = S.split()
 newStr = ""
 
-for ch in range(len(S),-1,-1):
-    newStr+=S[ch]
+for ch in range(len(words)-1,-1,-1):
+    newStr+=words[ch]+ " "
 print(newStr)
