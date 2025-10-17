@@ -7,12 +7,12 @@ def missing(nums):
 def missingXor(nums):
     n = len(nums)
     xor = 0
-    for i in range(1,n+1):
+    for i in range(1,n):
         xor^=i
     for num in nums:
         xor^=num
     return xor
 
-nums = [3,1,4,5,6,7,0]
+nums = list(map(int,input().split()))
 print(missing(nums))
 print(missingXor(nums))

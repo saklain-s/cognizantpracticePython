@@ -11,4 +11,29 @@
 # - Implement both brute-force and optimized approaches.
 # - Brute-force: Check every pair of elements.
 # - Optimized: Use a set or dictionary to find complements efficiently.
+import numpy as np
 
+def brute_force(nums,target):
+    newList=[]
+    for i in range(len(nums)):
+        for j in range(i+1,len(nums)):
+            if nums[i]+nums[j] == target:
+                newList.append((nums[i],nums[j]))
+    return newList
+
+def optimized(nums,target):
+    freq={}
+    pairs=[]
+    for num in nums:
+        complement = target - num
+        if complement in freq:
+            pairs.append((complement,num))
+        freq[num] = freq.get(num,0)+1
+
+    return pairs
+
+
+nums = list(map(int,input().split()))
+tar = int(input())
+print(brute_force(nums,tar))
+print(optimized(nums,tar))
