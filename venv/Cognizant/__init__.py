@@ -1,10 +1,2 @@
-nums = [3, 2, 1, 5, 6, 4]
-nums = nums[::-1]
-print(nums)
-
-text = "saklaiiana"
-freq = {}
-for ch in freq:
-    freq[ch] = freq.get(ch,0)+1
-    print(freq[0])
-
+s = {3, 1, 2}
+print(s)  # Could print {1,2,3} → order is not guaranteed

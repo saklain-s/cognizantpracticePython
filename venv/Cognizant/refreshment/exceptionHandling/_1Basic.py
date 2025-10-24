@@ -4,5 +4,5 @@ try:
     print(x//y)
 except ZeroDivisionError:
     print("Cannot divide by zero")
-except ValueError:
+except ValueError as e :
     print("Invalid input, numbers only")

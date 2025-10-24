@@ -13,7 +13,6 @@ class Student:
         else:
             print("Invalid marks! Must be between 0 to 100")
 
-
 s1 = Student("Saklain",85)
 
 print(s1.get_marks())

@@ -33,8 +33,6 @@ def optimized(s1,s2):
     temp = s1 + s1
     return s2 in temp
 
-
-
 s = input().strip()
 s2 = input().strip()
 print(brute(s,s2))

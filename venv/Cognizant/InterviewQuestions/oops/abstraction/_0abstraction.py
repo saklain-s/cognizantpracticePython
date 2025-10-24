@@ -17,7 +17,6 @@ so whenever you want to define something syntactically but don’t have logic ye
         pass
 
 # concrete class implementing abstract methods
-
 class Car(vehicle):
     def start(self):
         print("Car Engine Started")

@@ -5,19 +5,16 @@ from statistics import mode
 
 def most_repeating(nums):
     max_count = 0
-    most_frequent = None
-
+    number = -1
     for i in range(len(nums)):
-        count = 0
+        cnt = 0
         for j in range(len(nums)):
             if nums[i] == nums[j]:
-                count+=1
-
-        if count > max_count:
-            max_count = count
-            most_frequent = nums[i]
-
-    return most_frequent
+                cnt+=1
+        if cnt > max_count:
+            max_count = cnt
+            number = nums[i]
+    return number
 
 def most_freq(nums):
     freq = {}

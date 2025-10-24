@@ -10,6 +10,7 @@ def palidromeornot(s)->bool:
         newStr+=s[index]
         index-=1
     return s == newStr
+
 text = input().strip()
 if is_palindrome(text):
     print("Palindrome")

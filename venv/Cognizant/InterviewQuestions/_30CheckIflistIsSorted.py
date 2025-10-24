@@ -16,16 +16,15 @@
 # - Optimized: Compare each element with its next neighbor.
 
 def brute(nums):
-    copy = sorted(nums)
-    return copy == nums
+    copt = sorted(nums)
+    return copt == nums
 
 def brute_without_fun(nums):
-    sort = True
+    Y = True
     for i in range(len(nums)-1):
         if nums[i] > nums[i+1]:
-            sort = False
-            break
-    return sort
+            return False
+    return Y
 
 nums = list(map(int,input().split()))
 print(brute(nums))

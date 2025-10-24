@@ -1,3 +1,6 @@
+import heapq
+
+
 def second_largest(nums):
     First, Second = None,None
 
@@ -8,11 +11,15 @@ def second_largest(nums):
         elif num != First and (Second is None or num > Second):
             Second = num
     return Second
+
+def usingHeap(nums,k):
+    min_heap = []
+    for num in nums:
+        heapq.heappush(min_heap,num)
+        if len(min_heap) > k:
+            heapq.heappop(min_heap)
+    return min_heap[0]
 nums = list(map(int,input().split()))
-unique = set(nums)
-sorted_list = sorted(unique,reverse=True)
-if len(sorted_list) < 2:
-    print(None)
-else:
-    print(sorted_list[1])
+print(second_largest(nums))
+print(usingHeap(nums,2))
 

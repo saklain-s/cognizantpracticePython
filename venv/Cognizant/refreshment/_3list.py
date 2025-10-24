@@ -29,7 +29,8 @@ for i in range(len(numbers)):  # i = 0, 1, 2
     numbers[i] = numbers[i] * 2
 
 
-
+squares = [x ** 2 for x in range(5)]
+print(squares)
 
 
 n = int(input())

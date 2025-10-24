@@ -1,1 +1,2 @@
-print(12345%10)
+for i in range(1,5):
+    print(i)
