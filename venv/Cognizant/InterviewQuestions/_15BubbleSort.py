@@ -13,7 +13,13 @@
 # Expected:
 # - Implement the sorting logic manually (do not use Python's sort()).
 # - Optimize by stopping early if no swaps occur in a full pass.
-
+def bubble(nums):
+    n = len(nums)
+    for i in range(n):
+        for j in range(n-i-1):
+            if nums[j] > nums[j+1]:
+                nums[j],nums[j+1]=nums[j+1],nums[j]
+    return nums
 
 nums = list(map(int,input().split()))
 n = len(nums)
@@ -27,3 +33,4 @@ for i in range(n):
     if not swapped:
         break
 print(nums)
+print(bubble(nums))

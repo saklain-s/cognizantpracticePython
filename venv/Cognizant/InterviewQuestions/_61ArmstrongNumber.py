@@ -27,8 +27,8 @@ def brute(n):
     k = len(str(n))
     total = 0
     while temp > 0:
-        digit = temp % 10
-        total+= digit ** k
+        rem = temp % 10
+        total+= rem ** k
         temp //= 10
     return total == n
 

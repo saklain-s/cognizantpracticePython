@@ -34,7 +34,7 @@ def optimized(s):
     maxSum=0
     n = len(s)
     hash_map = [-1] * 256
-    while(r < n):
+    while r < n:
         ch = s[r]
         if hash_map[ord(ch)] != -1:
             l = max(l, hash_map[ord(ch)]+1)
